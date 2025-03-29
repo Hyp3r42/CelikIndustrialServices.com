@@ -28,6 +28,10 @@ header {
     z-index: 1000;
 }
 
+nav {
+    position: relative;
+}
+
 nav ul {
     list-style: none;
     display: flex;
