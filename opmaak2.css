@@ -131,33 +131,44 @@ nav ul li a {
     color: black;
 }
 
-/* Responsieve stijlen */
+
+/* Hamburger menu voor mobiel */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+    transition: 0.3s;
+}
+
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
+    .menu-toggle {
+        display: flex;
     }
-    
+
     nav ul {
+        display: none;
         flex-direction: column;
-        padding-top: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+        padding: 10px 0;
     }
-    
+
+    nav ul.active {
+        display: flex;
+    }
+
     nav ul li {
         margin: 10px 0;
-    }
-    
-    .section-1 {
-        width: 100%;
-        padding: 10px;
-    }
-    
-    .section-1 .content {
-        width: 90%;
-    }
-    
-    .button-container {
-        flex-direction: column;
-        gap: 10px;
     }
 }
