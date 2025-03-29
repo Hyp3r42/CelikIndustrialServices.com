@@ -24,6 +24,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* Verwijdert fixed positioning */
     color: white;
     z-index: 1000;
 }
@@ -77,27 +78,20 @@ nav ul li a {
 
 /* Responsieve stijlen */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
     }
 
     nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        text-align: center;
-        padding: 10px 0;
+        gap: 5px; /* Maak ruimte tussen de links kleiner */
     }
 
-    nav ul.active {
-        display: flex;
-    }
-
-    nav ul li {
-        margin: 10px 0;
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 6px 10px; /* Maak de knoppen kleiner */
     }
 }
