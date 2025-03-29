@@ -4,12 +4,13 @@ body {
     font-family: Arial, sans-serif;
     background: url('foto/foto2.jpeg') no-repeat center center fixed;
     background-size: cover;
-    color: white; /* Zorgt ervoor dat de tekst goed zichtbaar is */
+    color: white;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 /* Header */
@@ -17,9 +18,9 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 97%;
+    width: 98%;
     background: rgba(0, 0, 0, 0.7);
-    padding: 15px 50px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,13 +44,13 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Sectie: Contact */
+/* Contact sectie */
 .section-2 {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
-    width: 97%;
+    width: 90%;
     padding: 20px;
 }
 
@@ -72,4 +73,31 @@ nav ul li a {
     font-size: 1.1rem;
     color: #555;
     line-height: 1.6;
+}
+
+/* Responsieve stijlen */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    .section-2 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .section-2 .content {
+        width: 90%;
+        padding: 20px;
+    }
 }
